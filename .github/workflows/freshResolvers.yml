@@ -3,7 +3,7 @@ name: freshResolvers
 on:
   schedule:
   # Run daily
-    - cron:  '0 21 * * *'
+    - cron:  '0 * * * *'
 
 jobs:
   resfresh-list:
@@ -35,7 +35,7 @@ jobs:
         run: pip3 install contextvars
     
       - name: Generate new resolvers
-        run: dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 20 --silent -o ~/resolvers.txt
+        run: dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 400 --silent -o ~/resolvers.txt
     
       - name: Set current date
         run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
