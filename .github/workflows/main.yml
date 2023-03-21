@@ -35,7 +35,7 @@ jobs:
         run: pip3 install contextvars
     
       - name: Generate new resolvers
-        run: echo 'done' | tee ~/resolvers.txt
+        run: echo 'done' >> tee ~/resolvers.txt
         
         #dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 300 --silent -o ~/resolvers.txt
     
