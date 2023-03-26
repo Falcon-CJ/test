@@ -3,7 +3,7 @@ name: freshResolvers
 on:
   schedule:
   # Run daily
-    - cron:  '30 14 * * *' #'*/3 * * * *'#
+    - cron:  '30 18 * * *' #'*/3 * * * *'#
 
 jobs:
   resfresh-list:
